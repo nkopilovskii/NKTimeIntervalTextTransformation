@@ -1,0 +1,6 @@
+framework module NKTimeIntervalTextTransformation {
+  umbrella header "NKTimeIntervalTextTransformation-umbrella.h"
+
+  export *
+  module * { export * }
+}

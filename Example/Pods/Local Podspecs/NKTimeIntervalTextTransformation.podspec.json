@@ -1,0 +1,22 @@
+{
+  "name": "NKTimeIntervalTextTransformation",
+  "version": "0.1.0",
+  "summary": "A short description of NKTimeIntervalTextTransformation.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/nkopilovskii/NKTimeIntervalTextTransformation",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "nkopilovskii": "nikolay.k@powercode.us"
+  },
+  "source": {
+    "git": "https://github.com/nkopilovskii/NKTimeIntervalTextTransformation.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "NKTimeIntervalTextTransformation/Classes/**/*"
+}

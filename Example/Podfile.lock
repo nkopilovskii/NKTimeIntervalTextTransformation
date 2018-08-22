@@ -1,0 +1,16 @@
+PODS:
+  - NKTimeIntervalTextTransformation (0.1.0)
+
+DEPENDENCIES:
+  - NKTimeIntervalTextTransformation (from `../`)
+
+EXTERNAL SOURCES:
+  NKTimeIntervalTextTransformation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NKTimeIntervalTextTransformation: fb89bf21d94dafab364effa3103456b81ba009b5
+
+PODFILE CHECKSUM: 1d667b818ab6cdfa7b5a7b956f35325d88c38abf
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NKTimeIntervalTextTransformation_Example' do
+  pod 'NKTimeIntervalTextTransformation', :path => '../'
+
+  target 'NKTimeIntervalTextTransformation_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
