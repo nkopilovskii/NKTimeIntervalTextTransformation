@@ -9,16 +9,10 @@
 Pod::Spec.new do |s|
   s.name             = 'NKTimeIntervalTextTransformation'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of NKTimeIntervalTextTransformation.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'Transformation TimeInterval between dates with customization of the declination rules'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+The framework is represented by an extension of class Date using public configuration structure of NKTextTimeIntervalConfiguration which defines the output format of a time interval in a meaningful text format with given rules for declining numeric
                        DESC
 
   s.homepage         = 'https://github.com/nkopilovskii/NKTimeIntervalTextTransformation'
@@ -26,17 +20,11 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'nkopilovskii' => 'nikolay.k@powercode.us' }
   s.source           = { :git => 'https://github.com/nkopilovskii/NKTimeIntervalTextTransformation.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.social_media_url = 'https://twitter.com/MKopilovskii'
 
-  s.ios.deployment_target = '8.0'
-
+  s.ios.deployment_target = '10.0'
+  s.swift_version  = '4.0'
   s.source_files = 'NKTimeIntervalTextTransformation/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'NKTimeIntervalTextTransformation' => ['NKTimeIntervalTextTransformation/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

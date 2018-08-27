@@ -1,30 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4bv-s8-6I2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Dummy Chat -->
+        <scene sceneID="u6r-3R-0mz">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NKTimeIntervalTextTransformation_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <tableViewController title="Dummy Chat " id="Qg4-vQ-9ON" customClass="DummyChat" customModule="NKTimeIntervalTextTransformation_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HBj-Ot-J1a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Qg4-vQ-9ON" id="dbS-bM-qqm"/>
+                            <outlet property="delegate" destination="Qg4-vQ-9ON" id="N4Q-q8-Uhw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="L0q-oL-atu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5FP-pk-mh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="714" y="-940"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D6n-lq-tMC">
+            <objects>
+                <navigationController id="4bv-s8-6I2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NSW-nH-tpO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bdf-74-5WH" kind="relationship" relationship="rootViewController" id="wy3-iO-FtW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfi-IT-6MR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-806" y="-487"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="omX-AS-6II">
+            <objects>
+                <viewController id="Bdf-74-5WH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eUW-0I-FWS"/>
+                        <viewControllerLayoutGuide type="bottom" id="XXQ-5H-qwz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9DE-tE-vES">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-Y3-mAa">
+                                <rect key="frame" x="143" y="278.5" width="89" height="30"/>
+                                <state key="normal" title="Dummy Chat"/>
+                                <connections>
+                                    <segue destination="Qg4-vQ-9ON" kind="show" id="bNp-QU-dl2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ma-CB-PpA">
+                                <rect key="frame" x="126" y="358.5" width="122" height="30"/>
+                                <state key="normal" title="Dummy Reminder"/>
+                                <connections>
+                                    <segue destination="mhg-oJ-7qZ" kind="show" id="wq6-0K-urJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xvU-Y3-mAa" firstAttribute="centerY" secondItem="9DE-tE-vES" secondAttribute="centerY" constant="-40" id="KxL-ro-Zjh"/>
+                            <constraint firstItem="6Ma-CB-PpA" firstAttribute="centerY" secondItem="9DE-tE-vES" secondAttribute="centerY" constant="40" id="RIk-iE-e1w"/>
+                            <constraint firstItem="6Ma-CB-PpA" firstAttribute="centerX" secondItem="9DE-tE-vES" secondAttribute="centerX" id="Rfr-qQ-Z2q"/>
+                            <constraint firstItem="xvU-Y3-mAa" firstAttribute="centerX" secondItem="9DE-tE-vES" secondAttribute="centerX" id="TYx-gy-DL3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vSu-8z-S0j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqW-XI-kSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="-487"/>
+        </scene>
+        <!--Dummy Reminder-->
+        <scene sceneID="FxC-Ac-kwW">
+            <objects>
+                <tableViewController id="mhg-oJ-7qZ" customClass="DummyReminder" customModule="NKTimeIntervalTextTransformation_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TkI-KL-SJy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Esr-xT-l8M">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Esr-xT-l8M" id="UXv-hS-Rfl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mhg-oJ-7qZ" id="mdP-G6-0dv"/>
+                            <outlet property="delegate" destination="mhg-oJ-7qZ" id="6dP-ub-prC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fY-w6-B8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="-258"/>
         </scene>
     </scenes>
 </document>

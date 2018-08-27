@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DummyCell" customModule="NKTimeIntervalTextTransformation_Example" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DummyCell" rowHeight="85" id="8IE-Ua-iAC" customClass="DummyCell" customModule="NKTimeIntervalTextTransformation_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8IE-Ua-iAC" id="Fdi-ew-mzr">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z0e-pp-SFL">
+                        <rect key="frame" x="16" y="8.5" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="TPY-pR-Ddn"/>
+                            <constraint firstAttribute="height" constant="60" id="Y60-MF-6Lq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrK-mM-a6s">
+                        <rect key="frame" x="88" y="8" width="270.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2XE-MI-02N"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0xU-bk-ZKW">
+                        <rect key="frame" x="88" y="33" width="271" height="35.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="z0e-pp-SFL" firstAttribute="centerY" secondItem="Fdi-ew-mzr" secondAttribute="centerY" id="7Ir-zv-hhx"/>
+                    <constraint firstItem="0xU-bk-ZKW" firstAttribute="top" secondItem="zrK-mM-a6s" secondAttribute="bottom" constant="4" id="IWO-BG-yLa"/>
+                    <constraint firstAttribute="trailing" secondItem="zrK-mM-a6s" secondAttribute="trailing" constant="16" id="MN1-uk-UJ6"/>
+                    <constraint firstItem="z0e-pp-SFL" firstAttribute="leading" secondItem="Fdi-ew-mzr" secondAttribute="leading" constant="16" id="Rz6-w7-ulw"/>
+                    <constraint firstItem="zrK-mM-a6s" firstAttribute="top" secondItem="Fdi-ew-mzr" secondAttribute="top" constant="8" id="Ta0-tl-Dis"/>
+                    <constraint firstItem="0xU-bk-ZKW" firstAttribute="leading" secondItem="z0e-pp-SFL" secondAttribute="trailing" constant="12" id="hXh-Cb-E2J"/>
+                    <constraint firstItem="zrK-mM-a6s" firstAttribute="leading" secondItem="z0e-pp-SFL" secondAttribute="trailing" constant="12" id="kzY-Ah-pMo"/>
+                    <constraint firstAttribute="bottom" secondItem="0xU-bk-ZKW" secondAttribute="bottom" constant="8" id="lNF-RO-54y"/>
+                    <constraint firstAttribute="trailing" secondItem="0xU-bk-ZKW" secondAttribute="trailing" constant="16" id="unl-fs-gxM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblMessage" destination="0xU-bk-ZKW" id="vZm-5e-z8f"/>
+                <outlet property="lblTime" destination="zrK-mM-a6s" id="jQO-Gk-hQi"/>
+            </connections>
+            <point key="canvasLocation" x="124" y="-490"/>
+        </tableViewCell>
+    </objects>
+</document>

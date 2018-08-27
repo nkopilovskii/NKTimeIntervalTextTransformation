@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BA90D6A2133D1270005F2DB /* DummyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA90D692133D1270005F2DB /* DummyChat.swift */; };
+		1BA90D6C2133D1400005F2DB /* DummyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA90D6B2133D1400005F2DB /* DummyReminder.swift */; };
+		1BA90D6E2133D3000005F2DB /* DummyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA90D6D2133D3000005F2DB /* DummyCell.swift */; };
+		1BA90D702133D3140005F2DB /* DummyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BA90D6F2133D3140005F2DB /* DummyCell.xib */; };
 		234CAF36D0711AB59DF41C9C /* Pods_NKTimeIntervalTextTransformation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A4DBBBD35F918B5B2BEBF5 /* Pods_NKTimeIntervalTextTransformation_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -28,23 +31,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CAB90538EBE7825729EB048 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0CAB90538EBE7825729EB048 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1BA90D692133D1270005F2DB /* DummyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyChat.swift; sourceTree = "<group>"; };
+		1BA90D6B2133D1400005F2DB /* DummyReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyReminder.swift; sourceTree = "<group>"; };
+		1BA90D6D2133D3000005F2DB /* DummyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCell.swift; sourceTree = "<group>"; };
+		1BA90D6F2133D3140005F2DB /* DummyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DummyCell.xib; sourceTree = "<group>"; };
 		3FD843BF96C453ABA099E91D /* Pods_NKTimeIntervalTextTransformation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NKTimeIntervalTextTransformation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D41C97EE51EB289F0AE561 /* Pods-NKTimeIntervalTextTransformation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NKTimeIntervalTextTransformation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NKTimeIntervalTextTransformation_Tests/Pods-NKTimeIntervalTextTransformation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* NKTimeIntervalTextTransformation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NKTimeIntervalTextTransformation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* NKTimeIntervalTextTransformation_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NKTimeIntervalTextTransformation_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8100BFEBD1C262B5545ED3F4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8100BFEBD1C262B5545ED3F4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D9A4DBBBD35F918B5B2BEBF5 /* Pods_NKTimeIntervalTextTransformation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NKTimeIntervalTextTransformation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33C179C63BC6D22ABA769A2 /* Pods-NKTimeIntervalTextTransformation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NKTimeIntervalTextTransformation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NKTimeIntervalTextTransformation_Example/Pods-NKTimeIntervalTextTransformation_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F6145B9BEFC58D4C80AEE534 /* NKTimeIntervalTextTransformation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = NKTimeIntervalTextTransformation.podspec; path = ../NKTimeIntervalTextTransformation.podspec; sourceTree = "<group>"; };
+		F6145B9BEFC58D4C80AEE534 /* NKTimeIntervalTextTransformation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NKTimeIntervalTextTransformation.podspec; path = ../NKTimeIntervalTextTransformation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F76F372582BC0E54F0D419F9 /* Pods-NKTimeIntervalTextTransformation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NKTimeIntervalTextTransformation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NKTimeIntervalTextTransformation_Example/Pods-NKTimeIntervalTextTransformation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FBC27E65E3B9C11873E39E34 /* Pods-NKTimeIntervalTextTransformation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NKTimeIntervalTextTransformation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NKTimeIntervalTextTransformation_Tests/Pods-NKTimeIntervalTextTransformation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,7 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				1BA90D692133D1270005F2DB /* DummyChat.swift */,
+				1BA90D6B2133D1400005F2DB /* DummyReminder.swift */,
+				1BA90D6D2133D3000005F2DB /* DummyCell.swift */,
+				1BA90D6F2133D3140005F2DB /* DummyCell.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -247,6 +256,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				1BA90D702133D3140005F2DB /* DummyCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				1BA90D6C2133D1400005F2DB /* DummyReminder.swift in Sources */,
+				1BA90D6E2133D3000005F2DB /* DummyCell.swift in Sources */,
+				1BA90D6A2133D1270005F2DB /* DummyChat.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,12 +482,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NKTimeIntervalTextTransformation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -485,12 +499,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NKTimeIntervalTextTransformation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

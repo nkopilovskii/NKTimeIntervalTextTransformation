@@ -22,7 +22,7 @@ pod 'NKTimeIntervalTextTransformation'
 
 ## Author
 
-nkopilovskii, nikolay.k@powercode.us
+nkopilovskii, nkopilovskii@gmail.com
 
 ## License
 

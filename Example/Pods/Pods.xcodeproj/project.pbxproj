@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B962F1B212D96BF007B14AD /* TimeInterval+DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F18212D96BF007B14AD /* TimeInterval+DateComponents.swift */; };
 		1B962F1C212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */; };
-		1B962F1D212D96BF007B14AD /* NKTimeIntervalTextTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F1A212D96BF007B14AD /* NKTimeIntervalTextTransformable.swift */; };
+		1B962F1D212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */; };
 		30057A1A4F5D9DA5EDB718F225AA6BC4 /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCD89C1319A9F3785D7325B78ABC98C /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CF32A2FC8938714F2B56925A73AB6CC /* Pods-NKTimeIntervalTextTransformation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA698E5C1D54CD0EA4D2BFDCA87A2FDA /* Pods-NKTimeIntervalTextTransformation_Tests-dummy.m */; };
 		599B2E39C5B48A46A7623945CF86E89C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -44,7 +44,7 @@
 		1B7E7CEBE58786F444117BC66CE890FF /* Pods-NKTimeIntervalTextTransformation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NKTimeIntervalTextTransformation_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		1B962F18212D96BF007B14AD /* TimeInterval+DateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeInterval+DateComponents.swift"; path = "NKTimeIntervalTextTransformation/Classes/TimeInterval+DateComponents.swift"; sourceTree = "<group>"; };
 		1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NKTextTimeIntervalConfiguration.swift; path = NKTimeIntervalTextTransformation/Classes/NKTextTimeIntervalConfiguration.swift; sourceTree = "<group>"; };
-		1B962F1A212D96BF007B14AD /* NKTimeIntervalTextTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NKTimeIntervalTextTransformable.swift; path = NKTimeIntervalTextTransformation/Classes/NKTimeIntervalTextTransformable.swift; sourceTree = "<group>"; };
+		1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+NKTimeIntervalTextTransformable.swift"; path = "NKTimeIntervalTextTransformation/Classes/Date+NKTimeIntervalTextTransformable.swift"; sourceTree = "<group>"; };
 		22453B90D6BAF192AB5AA36F6CE7E598 /* Pods-NKTimeIntervalTextTransformation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NKTimeIntervalTextTransformation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2CCD89C1319A9F3785D7325B78ABC98C /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h"; sourceTree = "<group>"; };
 		309F52C6477E7BB979C1895CAD4D967A /* NKTimeIntervalTextTransformation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = NKTimeIntervalTextTransformation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -156,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */,
-				1B962F1A212D96BF007B14AD /* NKTimeIntervalTextTransformable.swift */,
+				1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */,
 				1B962F18212D96BF007B14AD /* TimeInterval+DateComponents.swift */,
 				EC08FC3FFCA9FC05D3ABED5EFA632EEE /* Pod */,
 				ABAB4CF0A5E267DACB8ABC5B7022B987 /* Support Files */,
@@ -364,7 +364,7 @@
 			files = (
 				9F50A6D5A416E6EE93C595EC8286722B /* NKTimeIntervalTextTransformation-dummy.m in Sources */,
 				1B962F1B212D96BF007B14AD /* TimeInterval+DateComponents.swift in Sources */,
-				1B962F1D212D96BF007B14AD /* NKTimeIntervalTextTransformable.swift in Sources */,
+				1B962F1D212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift in Sources */,
 				1B962F1C212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,7 +447,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/NKTimeIntervalTextTransformation/NKTimeIntervalTextTransformation-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/NKTimeIntervalTextTransformation/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/NKTimeIntervalTextTransformation/NKTimeIntervalTextTransformation.modulemap";
 				PRODUCT_MODULE_NAME = NKTimeIntervalTextTransformation;
@@ -517,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -679,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -704,7 +704,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/NKTimeIntervalTextTransformation/NKTimeIntervalTextTransformation-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/NKTimeIntervalTextTransformation/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/NKTimeIntervalTextTransformation/NKTimeIntervalTextTransformation.modulemap";
 				PRODUCT_MODULE_NAME = NKTimeIntervalTextTransformation;

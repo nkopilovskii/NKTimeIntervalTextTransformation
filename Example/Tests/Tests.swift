@@ -1,5 +1,5 @@
 import XCTest
-import NKTimeIntervalTextTransformation
+//import NKTimeIntervalTextTransformation
 
 class Tests: XCTestCase {
     

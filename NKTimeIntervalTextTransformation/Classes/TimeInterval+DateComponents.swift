@@ -8,21 +8,23 @@
 import Foundation
 
 protocol NKTimeIntervalDateComponents {
-  var seconds:  Int { get }
-  var minutes:  Int { get }
-  var hours:    Int { get }
-  var days:     Int { get }
-  var weeks:    Int { get }
-  var months:   Int { get }
-  var years:    Int { get }
+  var seconds:    Double { get }
+  var minutes:    Double { get }
+  var hours:      Double { get }
+  var days:       Double { get }
+  var weeks:      Double { get }
+  var months:     Double { get }
+  var years:      Double { get }
+  var centuries:  Double { get }
 }
 
 extension TimeInterval: NKTimeIntervalDateComponents {
-  var seconds:  Int { return Int(self) }
-  var minutes:  Int { return Int(self / 60) }
-  var hours:    Int { return Int(self / 3600) }
-  var days:     Int { return Int(self / (3600 * 24)) }
-  var weeks:    Int { return Int(self / (3600 * 24 * 7)) }
-  var months:   Int { return Int(self / (3600 * 24 * 7 * 4)) }
-  var years:    Int { return Int(self / (3600 * 24 * 365)) }
+  public var seconds:    Double { return Double(self) }
+  public var minutes:    Double { return Double(self / 60) }
+  public var hours:      Double { return Double(self / 3600) }
+  public var days:       Double { return Double(self / (3600 * 24)) }
+  public var weeks:      Double { return Double(self / (3600 * 24 * 7)) }
+  public var months:     Double { return Double(self / (3600 * 24 * 7 * 4)) }
+  public var years:      Double { return Double(self / (3600 * 24 * 365)) }
+  public var centuries:  Double { return Double(self / (3600 * 24 * 365 * 100)) }
 }
