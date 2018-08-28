@@ -188,7 +188,7 @@ Time component count (Double used if it needs to make representation for floatin
 
 //MARK: - NKTextTimeIntervalConfiguration default configurations
 /**
-  This extension contains static methods that generate configurations based on rules for declining the numerals of English and Russian
+  This extension contains static methods that generate configurations based on rules for declining the numerals of some languages
  */
 public extension NKTextTimeIntervalConfiguration {
   

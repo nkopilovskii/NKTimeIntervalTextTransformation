@@ -1,5 +1,5 @@
 //
-//  NKTimeInterval+DateComponents.swift
+//  NKTimeInterval+NKTimeIntervalDateComponents.swift
 //
 //  Created by Nick Kopilovskii on 22.08.2018.
 //  Copyright © 2018 Nick Kopilovskii. All rights reserved.

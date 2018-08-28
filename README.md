@@ -131,10 +131,11 @@ public struct NKTextTimeIntervalConfiguration {
   public func formatedString(for rule: NKTimeComponentDeclensionRule?, with value: Double) -> String? 
 }
   
-  /**
-  This extension contains static methods that generate configurations based on rules for declining the numerals of English and Russian
-  */
+  
 //MARK: - NKTextTimeIntervalConfiguration default configurations
+/**
+  This extension contains static methods that generate configurations based on rules for declining the numerals of some languages
+*/
 public extension NKTextTimeIntervalConfiguration {
   
   /**
@@ -155,7 +156,7 @@ public extension NKTextTimeIntervalConfiguration {
 ````
 
 
-### Protocol `NKTimeComponentDeclensionRule`  and `TimeInterval` extension
+### Protocol `NKTimeIntervalDateComponents`  and `TimeInterval` extension
 ```swift
 protocol NKTimeIntervalDateComponents {
   var seconds:    Double { get }
@@ -176,10 +177,12 @@ extension TimeInterval: NKTimeIntervalDateComponents { }
 ### Protocol `NKTimeIntervalTextTransformable` and `Date` extension
 ```swift 
 /**
-  Protocol declares methods for obtaining a time interval in a string representation using NKTextTimeIntervalConfiguration
+  Protocol declares methods for obtaining a time interval between two dates in a string representation using NKTextTimeIntervalConfiguration
 */
 public protocol NKTimeIntervalTextTransformable {
-
+  /**
+    Protocol declares methods for obtaining a time interval between two dates in a string representation using NKTextTimeIntervalConfiguration
+  */
   static func timeIntervalFromNow(to date: Date, with config: NKTextTimeIntervalConfiguration) -> String?
 
   func timeInterval(to date: Date, with config: NKTextTimeIntervalConfiguration) -> String?
@@ -187,7 +190,7 @@ public protocol NKTimeIntervalTextTransformable {
 }
 
 /**
-Implementation of NKTimeIntervalTextTransformable protocol in extension of the class Date
+  Implementation of NKTimeIntervalTextTransformable protocol in extension of the class Date
 */
 extension Date: NKTimeIntervalTextTransformable {}
 ```

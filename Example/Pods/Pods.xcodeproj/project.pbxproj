@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B962F1B212D96BF007B14AD /* TimeInterval+DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F18212D96BF007B14AD /* TimeInterval+DateComponents.swift */; };
+		1B962F1B212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F18212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift */; };
 		1B962F1C212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */; };
 		1B962F1D212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */; };
 		30057A1A4F5D9DA5EDB718F225AA6BC4 /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCD89C1319A9F3785D7325B78ABC98C /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,7 +42,7 @@
 		0461CB97A9F8FA0804460D78DEADA2C5 /* NKTimeIntervalTextTransformation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NKTimeIntervalTextTransformation-umbrella.h"; sourceTree = "<group>"; };
 		1845A814BC4E392C4D935BFC31C1CA65 /* Pods-NKTimeIntervalTextTransformation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NKTimeIntervalTextTransformation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1B7E7CEBE58786F444117BC66CE890FF /* Pods-NKTimeIntervalTextTransformation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NKTimeIntervalTextTransformation_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1B962F18212D96BF007B14AD /* TimeInterval+DateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeInterval+DateComponents.swift"; path = "NKTimeIntervalTextTransformation/Classes/TimeInterval+DateComponents.swift"; sourceTree = "<group>"; };
+		1B962F18212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeInterval+NKTimeIntervalDateComponents.swift"; path = "NKTimeIntervalTextTransformation/Classes/TimeInterval+NKTimeIntervalDateComponents.swift"; sourceTree = "<group>"; };
 		1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NKTextTimeIntervalConfiguration.swift; path = NKTimeIntervalTextTransformation/Classes/NKTextTimeIntervalConfiguration.swift; sourceTree = "<group>"; };
 		1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+NKTimeIntervalTextTransformable.swift"; path = "NKTimeIntervalTextTransformation/Classes/Date+NKTimeIntervalTextTransformable.swift"; sourceTree = "<group>"; };
 		22453B90D6BAF192AB5AA36F6CE7E598 /* Pods-NKTimeIntervalTextTransformation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NKTimeIntervalTextTransformation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			children = (
 				1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */,
 				1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */,
-				1B962F18212D96BF007B14AD /* TimeInterval+DateComponents.swift */,
+				1B962F18212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift */,
 				EC08FC3FFCA9FC05D3ABED5EFA632EEE /* Pod */,
 				ABAB4CF0A5E267DACB8ABC5B7022B987 /* Support Files */,
 			);
@@ -363,7 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F50A6D5A416E6EE93C595EC8286722B /* NKTimeIntervalTextTransformation-dummy.m in Sources */,
-				1B962F1B212D96BF007B14AD /* TimeInterval+DateComponents.swift in Sources */,
+				1B962F1B212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift in Sources */,
 				1B962F1D212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift in Sources */,
 				1B962F1C212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift in Sources */,
 			);
