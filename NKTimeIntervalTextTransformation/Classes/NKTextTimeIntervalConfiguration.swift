@@ -139,14 +139,14 @@ Seconds beetween two dates
   public func stringRepresentation(for interval: TimeInterval) -> String? {
     guard Int(interval) != 0 else { return zeroTimeIntervalPlaceholder }
     
-    if interval.centuries != 0, let rule = centuries, let str = formatedString(for: rule, with: interval.centuries) { return str }
-    if interval.years != 0, let rule = years, let str = formatedString(for: rule, with: interval.years) { return str }
-    if interval.months != 0, let rule = months, let str = formatedString(for: rule, with: interval.months) { return str }
-    if interval.weeks != 0, let rule = weeks, let str = formatedString(for: rule, with: interval.weeks) { return str }
-    if interval.days != 0, let rule = days, let str = formatedString(for: rule, with: interval.days) { return str }
-    if interval.hours != 0, let rule = hours, let str = formatedString(for: rule, with: interval.hours) { return str }
-    if interval.minutes != 0, let rule = minutes, let str = formatedString(for: rule, with: interval.minutes) { return str }
-    if interval.seconds != 0, let rule = seconds, let str = formatedString(for: rule, with: interval.seconds) { return str }
+    if let rule = centuries, let str = formatedString(for: rule, with: interval.centuries)    { return str }
+    if let rule = years,     let str = formatedString(for: rule, with: interval.years)        { return str }
+    if let rule = months,    let str = formatedString(for: rule, with: interval.months)       { return str }
+    if let rule = weeks,     let str = formatedString(for: rule, with: interval.weeks)        { return str }
+    if let rule = days,      let str = formatedString(for: rule, with: interval.days)         { return str }
+    if let rule = hours,     let str = formatedString(for: rule, with: interval.hours)        { return str }
+    if let rule = minutes,   let str = formatedString(for: rule, with: interval.minutes)      { return str }
+    if let rule = seconds,   let str = formatedString(for: rule, with: interval.seconds)      { return str }
     
     return nil
   }
@@ -171,7 +171,6 @@ Time component count (Double used if it needs to make representation for floatin
    - returns: Optional String
    */
   public func formatedString(for rule: NKTimeComponentDeclensionRule?, with value: Double) -> String? {
-    guard Int(value) != 0 else { return zeroTimeIntervalPlaceholder }
     guard let declensionRule = rule else { return nil }
     guard let (timeComponentStringValue, shouldWriteNumbers) = declensionRule(TimeInterval(abs(value))) else { return nil }
     
@@ -186,10 +185,11 @@ Time component count (Double used if it needs to make representation for floatin
   }
 }
 
+
+//MARK: - NKTextTimeIntervalConfiguration default configurations
 /**
   This extension contains static methods that generate configurations based on rules for declining the numerals of English and Russian
  */
-//MARK: - NKTextTimeIntervalConfiguration default configurations
 public extension NKTextTimeIntervalConfiguration {
   
   /**
@@ -202,14 +202,38 @@ public extension NKTextTimeIntervalConfiguration {
     config.zeroTimeIntervalPlaceholder = "now"
     config.futureFormat = "in \(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey)"
     
-    config.seconds = { return $0 == 1 ? ("a second", false) : ("seconds", true) }
-    config.minutes = { return $0 == 1 ? ("a minute", false) : ("minutes", true) }
-    config.hours = { return $0 == 1 ? ("an hour", false)   : ("hours", true) }
-    config.days = { return $0 == 1 ? ("a day", false)    : ("days", true) }
-    config.weeks = { return $0 == 1 ? ("a week", false)   : ("weeks", true) }
-    config.months = { return $0 == 1 ? ("a month", false)  : ("months", true) }
-    config.years = { return $0 == 1 ? ("a year", false)   : ("years", true) }
-    config.centuries  = { return $0 == 1 ? ("a century", false)   : ("centuries", true) }
+    config.seconds = {
+      if Int($0) == 0 { return nil }
+      return abs($0) == 1 ? ("a second", false) : ("seconds", true)
+    }
+    config.minutes = {
+      if Int($0) == 0 { return nil }
+      return abs($0) == 1 ? ("a minute", false) : ("minutes", true)
+    }
+    config.hours = {
+      if Int($0) == 0 { return nil }
+      return abs($0) == 1 ? ("an hour", false)   : ("hours", true)
+    }
+    config.days = {
+      if Int($0) == 0 { return nil }
+      return abs($0) == 1 ? ("a day", false)    : ("days", true)
+    }
+    config.weeks = {
+      if Int($0) == 0 { return nil }
+      return abs($0) == 1 ? ("a week", false)   : ("weeks", true)
+    }
+    config.months = {
+      if Int($0) == 0 { return nil }
+      return abs($0) == 1 ? ("a month", false)  : ("months", true)
+    }
+    config.years = {
+      if Int($0) == 0 { return nil }
+      return abs($0) == 1 ? ("a year", false)   : ("years", true)
+    }
+    config.centuries  = {
+      if Int($0) == 0 { return nil }
+      return abs($0) == 1 ? ("a century", false)   : ("centuries", true)
+    }
     
     return config
   }
@@ -223,53 +247,145 @@ public extension NKTextTimeIntervalConfiguration {
     config.pastFormat = "\(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey) назад"
     config.zeroTimeIntervalPlaceholder = "сейчас"
     config.futureFormat = "через \(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey)"
-    
+
+    let ruleLastOne: (Double) -> Bool = { return Int($0) % 10 == 1 && Int($0) % 100 != 11 }
+    let ruleLastTwoThreeFour: (Double) -> Bool = {
+      if ( (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) ) == true { return true }
+      return false
+    }
+      
     config.seconds = {
-      if Int($0) % 10 == 1 && Int($0) % 100 != 11 { return ("секунду", Int($0) != 1) }
-      if (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) { return ("секунды", true) }
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("секунду", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("секунды", true) }
       return ("секунд", true)
     }
     
     config.minutes = {
-      if Int($0) % 10 == 1 && Int($0) % 100 != 11 { return ("минуту", Int($0) != 1) }
-      if (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) { return ("минуты", true) }
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("минуту", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("минуты", true) }
       return ("минут", true)
     }
     
     config.hours = {
-      if Int($0) % 10 == 1 && Int($0) % 100 != 11 { return ("час", Int($0) != 1) }
-      if (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) { return ("часа", true) }
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("час", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("часа", true) }
       return ("часов", true)
     }
     
     config.days = {
-      if Int($0) % 10 == 1 && Int($0) % 100 != 11 { return ("день", true) }
-      if (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) { return ("дня", true) }
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true  { return ("день", true) }
+      if ruleLastTwoThreeFour($0) == true { return ("дня", true) }
       return ("дней", true)
     }
     
     config.weeks = {
-      if Int($0) % 10 == 1 && Int($0) % 100 != 11 { return ("неделю", Int($0) != 1) }
-      if (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) { return ("недели", true) }
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("неделю", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("недели", true) }
       return ("недель", true)
     }
     
     config.months = {
-      if Int($0) % 10 == 1 && Int($0) % 100 != 11 { return ("месяц", Int($0) != 1) }
-      if (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) { return ("месяца", true) }
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("месяц", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("месяца", true) }
       return ("месяцев", true)
     }
     
     config.years = {
-      if Int($0) % 10 == 1 && Int($0) % 100 != 11 { return ("год", Int($0) != 1) }
-            if (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) { return ("года", true) }
-      return ("лет", true)}
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("год", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("года", true) }
+      return ("лет", true)
+    }
+    
     config.centuries  = {
-      if Int($0) % 10 == 1 && Int($0) % 100 != 11 { return ("век", Int($0) != 1) }
-      if (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) { return ("века", true) }
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("век", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("века", true) }
       return ("веков", true)
     }
     
     return config
   }
+  
+  /**
+   Public static method generate default configuration based on rules for declining the numerals of Ukrainian
+   */
+  public static func defaultUkrainian() -> NKTextTimeIntervalConfiguration  {
+    var config = NKTextTimeIntervalConfiguration()
+    
+    config.pastFormat = "\(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey) тому"
+    config.zeroTimeIntervalPlaceholder = "зараз"
+    config.futureFormat = "через \(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey)"
+    
+    let ruleLastOne: (Double) -> Bool = { return Int($0) % 10 == 1 && Int($0) % 100 != 11 }
+    let ruleLastTwoThreeFour: (Double) -> Bool = {
+      if ( (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) ) == true { return true }
+      return false
+    }
+    
+    config.seconds = {
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("секунду", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("секунди", true) }
+      return ("секунд", true)
+    }
+    
+    config.minutes = {
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("хвилину", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("хвилини", true) }
+      return ("хвилин", true)
+    }
+    
+    config.hours = {
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("годину", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("години", true) }
+      return ("годин", true)
+    }
+    
+    config.days = {
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true  { return ("день", true) }
+      if ruleLastTwoThreeFour($0) == true { return ("дні", true) }
+      return ("днів", true)
+    }
+    
+    config.weeks = {
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("тиждень", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("тижні", true) }
+      return ("тижнів", true)
+    }
+    
+    config.months = {
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("місяць", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("місяці", true) }
+      return ("місяців", true)
+    }
+    
+    config.years = {
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("рік", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("роки", true) }
+      return ("років", true)
+    }
+    
+    config.centuries  = {
+      if Int($0) == 0 { return nil }
+      if ruleLastOne($0) == true { return ("століття", Int($0) != 1) }
+      if ruleLastTwoThreeFour($0) == true { return ("століття", true) }
+      return ("століть", true)
+    }
+    
+    return config
+  }
+  
 }

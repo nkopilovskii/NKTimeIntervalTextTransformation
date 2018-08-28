@@ -12,7 +12,7 @@ This framework provides the means for converting the numerical value of the time
 The framework contains:
 -  structure `NKTextTimeIntervalConfiguration`, which contains rules for converting a numerical value to a string format, performs transformations based on the specified rules;
 -  `TimeInterval` extension that computes the number of time components in the specified interval in the form of `Double` (`Double` is used instead of `Int` with the purpose that the user of the framework can independently set the rules for rounding or forming a line for fractional values);
-- `Date` class, which, based on date comparisons, generates a string representation of a time interval according to specified rules.
+- `Date` class extension, which, based on date comparisons, generates a string representation of a time interval according to specified rules.
 
 ## Interface
 ###  NKTimeComponentDeclensionRule
@@ -146,6 +146,11 @@ public extension NKTextTimeIntervalConfiguration {
     Public static method generate default configuration based on rules for declining the numerals of Russian
   */
   public static func defaultRussian() -> NKTextTimeIntervalConfiguration 
+  
+  /**
+    Public static method generate default configuration based on rules for declining the numerals of Ukrainian
+  */
+  public static func defaultUkrainian() -> NKTextTimeIntervalConfiguration 
 }
 ````
 

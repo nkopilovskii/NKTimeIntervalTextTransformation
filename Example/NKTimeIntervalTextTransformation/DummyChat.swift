@@ -13,7 +13,7 @@ class DummyChat: UITableViewController{
   
   var dates = [Date]()
   var dateFormatter = DateFormatter()
-  var timeIntervalConfiguration = NKTextTimeIntervalConfiguration.defaultEnglish()
+  var timeIntervalConfiguration = NKTextTimeIntervalConfiguration.defaultUkrainian()
   
   override func viewDidLoad() {
     super.viewDidLoad()
