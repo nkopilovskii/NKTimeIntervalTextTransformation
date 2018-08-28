@@ -5,6 +5,7 @@
 //  Copyright © 2018 Nick Kopilovskii. All rights reserved.
 //
 
+
 import Foundation
 
 //MARK: - NKTimeComponentDeclensionRule
@@ -19,7 +20,7 @@ import Foundation
                     <needs_display_numerical_value>) }
         else
           { return (<time_component_name>,
-                    <needs_display_numerical_value>)}
+                    <needs_display_numerical_value>) }
       }
  
  
@@ -33,10 +34,15 @@ integer part represents the number of complete time components in the considered
 */
 public typealias NKTimeComponentDeclensionRule = (Double) -> (String, Bool)?
 
+
+
+
+
+
+
 //MARK: - NKTextTimeIntervalConfiguration interface
 /**
  Struct **NKTextTimeIntervalConfiguration** describes rules for declining names of components, depending on their numerical value, format of output of time interval; converts a period of time into a string format
- 
  */
 public struct NKTextTimeIntervalConfiguration {
   /**
@@ -150,7 +156,7 @@ Seconds beetween two dates
    
    If `value` is equal zero returns `zeroTimeIntervalPlaceholder`
    
-  If `value > 0` will be used `pastFormat`, else - `futureFormat`
+   If `value > 0` will be used `pastFormat`, else - `futureFormat`
    
    If `rule` is equal zero returns `nil`
 
