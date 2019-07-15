@@ -11,6 +11,7 @@
 		1B962F1C212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */; };
 		1B962F1D212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */; };
 		30057A1A4F5D9DA5EDB718F225AA6BC4 /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCD89C1319A9F3785D7325B78ABC98C /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3902D78D22DCFBE3008E634E /* NKTextTimeIntervalConfiguration+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3902D78C22DCFBE3008E634E /* NKTextTimeIntervalConfiguration+Default.swift */; };
 		3CF32A2FC8938714F2B56925A73AB6CC /* Pods-NKTimeIntervalTextTransformation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA698E5C1D54CD0EA4D2BFDCA87A2FDA /* Pods-NKTimeIntervalTextTransformation_Tests-dummy.m */; };
 		599B2E39C5B48A46A7623945CF86E89C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		7DF741A27DEA30DE9C97EA06B59073F7 /* NKTimeIntervalTextTransformation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0461CB97A9F8FA0804460D78DEADA2C5 /* NKTimeIntervalTextTransformation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,12 +43,13 @@
 		0461CB97A9F8FA0804460D78DEADA2C5 /* NKTimeIntervalTextTransformation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NKTimeIntervalTextTransformation-umbrella.h"; sourceTree = "<group>"; };
 		1845A814BC4E392C4D935BFC31C1CA65 /* Pods-NKTimeIntervalTextTransformation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NKTimeIntervalTextTransformation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1B7E7CEBE58786F444117BC66CE890FF /* Pods-NKTimeIntervalTextTransformation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NKTimeIntervalTextTransformation_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1B962F18212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeInterval+NKTimeIntervalDateComponents.swift"; path = "NKTimeIntervalTextTransformation/Classes/TimeInterval+NKTimeIntervalDateComponents.swift"; sourceTree = "<group>"; };
+		1B962F18212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+NKTimeIntervalDateComponents.swift"; sourceTree = "<group>"; };
 		1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NKTextTimeIntervalConfiguration.swift; path = NKTimeIntervalTextTransformation/Classes/NKTextTimeIntervalConfiguration.swift; sourceTree = "<group>"; };
-		1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+NKTimeIntervalTextTransformable.swift"; path = "NKTimeIntervalTextTransformation/Classes/Date+NKTimeIntervalTextTransformable.swift"; sourceTree = "<group>"; };
+		1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+NKTimeIntervalTextTransformable.swift"; sourceTree = "<group>"; };
 		22453B90D6BAF192AB5AA36F6CE7E598 /* Pods-NKTimeIntervalTextTransformation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NKTimeIntervalTextTransformation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2CCD89C1319A9F3785D7325B78ABC98C /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h"; sourceTree = "<group>"; };
 		309F52C6477E7BB979C1895CAD4D967A /* NKTimeIntervalTextTransformation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = NKTimeIntervalTextTransformation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3902D78C22DCFBE3008E634E /* NKTextTimeIntervalConfiguration+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NKTextTimeIntervalConfiguration+Default.swift"; sourceTree = "<group>"; };
 		3BFC48498A2E9A96BAB15A13B12A770B /* NKTimeIntervalTextTransformation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NKTimeIntervalTextTransformation-dummy.m"; sourceTree = "<group>"; };
 		4D8608FFC8C556CB302A533C04E180CA /* NKTimeIntervalTextTransformation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NKTimeIntervalTextTransformation.xcconfig; sourceTree = "<group>"; };
 		4FEEBD3650FA3FEC3DDF8920ABF6C287 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,13 +158,23 @@
 			isa = PBXGroup;
 			children = (
 				1B962F19212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift */,
-				1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */,
-				1B962F18212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift */,
+				3902D78B22DCFA9C008E634E /* Extensions */,
 				EC08FC3FFCA9FC05D3ABED5EFA632EEE /* Pod */,
 				ABAB4CF0A5E267DACB8ABC5B7022B987 /* Support Files */,
 			);
 			name = NKTimeIntervalTextTransformation;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		3902D78B22DCFA9C008E634E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3902D78C22DCFBE3008E634E /* NKTextTimeIntervalConfiguration+Default.swift */,
+				1B962F1A212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift */,
+				1B962F18212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift */,
+			);
+			name = Extensions;
+			path = NKTimeIntervalTextTransformation/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -323,7 +335,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				TargetAttributes = {
 					76C19C449B5F296FAF0AB7FE21FF9CA5 = {
 						LastSwiftMigration = 0940;
@@ -332,10 +344,11 @@
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = 06EE0653D74B29652E5F2D493BF1E7E8 /* Products */;
@@ -365,6 +378,7 @@
 				9F50A6D5A416E6EE93C595EC8286722B /* NKTimeIntervalTextTransformation-dummy.m in Sources */,
 				1B962F1B212D96BF007B14AD /* TimeInterval+NKTimeIntervalDateComponents.swift in Sources */,
 				1B962F1D212D96BF007B14AD /* Date+NKTimeIntervalTextTransformable.swift in Sources */,
+				3902D78D22DCFBE3008E634E /* NKTextTimeIntervalConfiguration+Default.swift in Sources */,
 				1B962F1C212D96BF007B14AD /* NKTextTimeIntervalConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,7 +470,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -468,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -633,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -683,6 +699,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -713,7 +730,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

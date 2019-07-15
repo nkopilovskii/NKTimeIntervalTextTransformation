@@ -1,4 +1,24 @@
 //
+//Copyright (c) 2018 nkopilovskii <nikolay.k@powercode.us>
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in
+//all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
+//
 //  NKTextTimeIntervalConfiguration.swift
 //
 //  Created by Nick Kopilovskii on 22.08.2018.
@@ -195,45 +215,10 @@ public extension NKTextTimeIntervalConfiguration {
   /**
    Public static method generate default configuration based on rules for declining the numerals of English
    */
-  public static func defaultEnglish() -> NKTextTimeIntervalConfiguration  {
+  static func defaultEnglish() -> NKTextTimeIntervalConfiguration  {
     var config = NKTextTimeIntervalConfiguration()
     
-    config.pastFormat = "\(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey) ago"
-    config.zeroTimeIntervalPlaceholder = "now"
-    config.futureFormat = "in \(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey)"
-    
-    config.seconds = {
-      if Int($0) == 0 { return nil }
-      return abs($0) == 1 ? ("a second", false) : ("seconds", true)
-    }
-    config.minutes = {
-      if Int($0) == 0 { return nil }
-      return abs($0) == 1 ? ("a minute", false) : ("minutes", true)
-    }
-    config.hours = {
-      if Int($0) == 0 { return nil }
-      return abs($0) == 1 ? ("an hour", false)   : ("hours", true)
-    }
-    config.days = {
-      if Int($0) == 0 { return nil }
-      return abs($0) == 1 ? ("a day", false)    : ("days", true)
-    }
-    config.weeks = {
-      if Int($0) == 0 { return nil }
-      return abs($0) == 1 ? ("a week", false)   : ("weeks", true)
-    }
-    config.months = {
-      if Int($0) == 0 { return nil }
-      return abs($0) == 1 ? ("a month", false)  : ("months", true)
-    }
-    config.years = {
-      if Int($0) == 0 { return nil }
-      return abs($0) == 1 ? ("a year", false)   : ("years", true)
-    }
-    config.centuries  = {
-      if Int($0) == 0 { return nil }
-      return abs($0) == 1 ? ("a century", false)   : ("centuries", true)
-    }
+    config.setupDefaultEnglish()
     
     return config
   }
@@ -241,74 +226,10 @@ public extension NKTextTimeIntervalConfiguration {
   /**
    Public static method generate default configuration based on rules for declining the numerals of Russian
    */
-  public static func defaultRussian() -> NKTextTimeIntervalConfiguration  {
+  static func defaultRussian() -> NKTextTimeIntervalConfiguration  {
     var config = NKTextTimeIntervalConfiguration()
     
-    config.pastFormat = "\(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey) назад"
-    config.zeroTimeIntervalPlaceholder = "сейчас"
-    config.futureFormat = "через \(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey)"
-
-    let ruleLastOne: (Double) -> Bool = { return Int($0) % 10 == 1 && Int($0) % 100 != 11 }
-    let ruleLastTwoThreeFour: (Double) -> Bool = {
-      if ( (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) ) == true { return true }
-      return false
-    }
-      
-    config.seconds = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("секунду", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("секунды", true) }
-      return ("секунд", true)
-    }
-    
-    config.minutes = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("минуту", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("минуты", true) }
-      return ("минут", true)
-    }
-    
-    config.hours = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("час", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("часа", true) }
-      return ("часов", true)
-    }
-    
-    config.days = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true  { return ("день", true) }
-      if ruleLastTwoThreeFour($0) == true { return ("дня", true) }
-      return ("дней", true)
-    }
-    
-    config.weeks = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("неделю", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("недели", true) }
-      return ("недель", true)
-    }
-    
-    config.months = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("месяц", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("месяца", true) }
-      return ("месяцев", true)
-    }
-    
-    config.years = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("год", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("года", true) }
-      return ("лет", true)
-    }
-    
-    config.centuries  = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("век", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("века", true) }
-      return ("веков", true)
-    }
+   config.setupDefaultRussian()
     
     return config
   }
@@ -316,74 +237,10 @@ public extension NKTextTimeIntervalConfiguration {
   /**
    Public static method generate default configuration based on rules for declining the numerals of Ukrainian
    */
-  public static func defaultUkrainian() -> NKTextTimeIntervalConfiguration  {
+  static func defaultUkrainian() -> NKTextTimeIntervalConfiguration  {
     var config = NKTextTimeIntervalConfiguration()
     
-    config.pastFormat = "\(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey) тому"
-    config.zeroTimeIntervalPlaceholder = "зараз"
-    config.futureFormat = "через \(NKTextTimeIntervalConfiguration.numberValueKey) \(NKTextTimeIntervalConfiguration.timeComponentValueKey)"
-    
-    let ruleLastOne: (Double) -> Bool = { return Int($0) % 10 == 1 && Int($0) % 100 != 11 }
-    let ruleLastTwoThreeFour: (Double) -> Bool = {
-      if ( (Int($0) % 10 == 2 && Int($0) % 100 != 12) || (Int($0) % 10 == 3 && Int($0) % 100 != 13) || (Int($0) % 10 == 4 && Int($0) % 100 != 14) ) == true { return true }
-      return false
-    }
-    
-    config.seconds = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("секунду", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("секунди", true) }
-      return ("секунд", true)
-    }
-    
-    config.minutes = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("хвилину", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("хвилини", true) }
-      return ("хвилин", true)
-    }
-    
-    config.hours = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("годину", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("години", true) }
-      return ("годин", true)
-    }
-    
-    config.days = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true  { return ("день", true) }
-      if ruleLastTwoThreeFour($0) == true { return ("дні", true) }
-      return ("днів", true)
-    }
-    
-    config.weeks = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("тиждень", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("тижні", true) }
-      return ("тижнів", true)
-    }
-    
-    config.months = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("місяць", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("місяці", true) }
-      return ("місяців", true)
-    }
-    
-    config.years = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("рік", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("роки", true) }
-      return ("років", true)
-    }
-    
-    config.centuries  = {
-      if Int($0) == 0 { return nil }
-      if ruleLastOne($0) == true { return ("століття", Int($0) != 1) }
-      if ruleLastTwoThreeFour($0) == true { return ("століття", true) }
-      return ("століть", true)
-    }
+    config.setupDefaultUkrainian()
     
     return config
   }
