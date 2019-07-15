@@ -208,6 +208,12 @@ it, simply add the following line to your Podfile:
 pod 'NKTimeIntervalTextTransformation'
 ```
 
+## Requirements
+
+**iOS** 10.0
+
+**Swift** 5.0
+
 ## Author
 
 nkopilovskii, nkopilovskii@gmail.com
