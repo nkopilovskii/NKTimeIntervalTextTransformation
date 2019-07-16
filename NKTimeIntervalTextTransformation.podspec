@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NKTimeIntervalTextTransformation'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Transformation TimeInterval between dates with customization of the declination rules'
 
   s.description      = <<-DESC
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'nkopilovskii' => 'nkopilovskii@gmail.com' }
   s.source           = { :git => 'https://github.com/nkopilovskii/NKTimeIntervalTextTransformation.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/MKopilovskii'
+  s.social_media_url = 'https://twitter.com/MKopilovskii'
 
   s.ios.deployment_target = '10.0'
-  s.swift_version  = '4.0'
+  s.swift_version  = '5.0'
   s.source_files = 'NKTimeIntervalTextTransformation/Classes/**/*'
   
 

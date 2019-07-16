@@ -19,34 +19,42 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //THE SOFTWARE.
 //
-//  DateComponents+Extensions.swift
+//  Set+NKDateComponentRule.swift
 //
 //  Created by Nick Kopilovskii on 30.08.2018.
 //
 
 import Foundation
 
-extension DateComponents {
+public extension Set where Set.Element == NKDateComponent  {
   
-  func valueForGreatestDateComponent(in nkComponents: Set<NKDateComponent>) -> (NKDateComponent?, Int) {
-    
-    guard let greatestComponent = nkComponents.filter({self.value(for: $0) != 0}).greatest() else {return (nil, 0)}
-
-    let componentValue = value(for: greatestComponent) ?? 0
-
-    return (greatestComponent, componentValue)
+  mutating func removeEqual(to rule: NKDateComponent) {
+    guard let equalRule = equal(to: rule) else { return }
+    self.remove(equalRule)
   }
   
+  func equal(to rule: NKDateComponent) -> NKDateComponent? {
+    return first(where: { $0 == rule })
+  }
   
-  func value(for nkComponent: NKDateComponent) -> Int? {
-    if nkComponent == NKDateComponent.centuries({ _ in return nil }) {
-      return (value(for: .year) ?? 0) / 100
-    }
-    if nkComponent == NKDateComponent.weeks({ _ in return nil })  {
-      return (value(for: .day) ?? 0) / 7
-    }
-    guard let component = Calendar.Component.component(by: nkComponent) else { return nil }
-    return value(for: component)
+  func greatest() -> NKDateComponent? {
+    return self.min { lhs, rhs in return lhs < rhs }
+  }
+  
+  func smallest() -> NKDateComponent? {
+    return self.min { lhs, rhs in return lhs > rhs }
+  }
+  
+  func greatest(lessThan rule: NKDateComponent) -> NKDateComponent? {
+    return filter { $0 > rule }.greatest()
+  }
+  
+  func smallest(greaterThan rule: NKDateComponent) -> NKDateComponent? {
+    return filter { $0 < rule }.smallest()
+  }
+  
+  func nkComponent(with calendarComponent: Calendar.Component)  -> NKDateComponent? {
+    return first(where: {$0.hashValue == calendarComponent.hashValue})
   }
   
 }

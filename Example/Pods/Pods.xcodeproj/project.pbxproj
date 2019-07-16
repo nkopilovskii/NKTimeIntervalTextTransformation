@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1B84834921391C380012C418 /* Date+NKTimeIntervalTextTransformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84834321391C380012C418 /* Date+NKTimeIntervalTextTransformable.swift */; };
-		1B84834A21391C380012C418 /* NKTextTimeIntervalConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84834421391C380012C418 /* NKTextTimeIntervalConfiguration.swift */; };
 		1B84834B21391C380012C418 /* Set+NKDateComponentRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84834521391C380012C418 /* Set+NKDateComponentRule.swift */; };
 		1B84834C21391C380012C418 /* TimeInterval+NKTimeIntervalDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84834621391C380012C418 /* TimeInterval+NKTimeIntervalDateComponents.swift */; };
 		1B84834D21391C380012C418 /* NKDateComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84834721391C380012C418 /* NKDateComponent.swift */; };
@@ -16,6 +15,7 @@
 		1B84835121391C430012C418 /* Calendar.Component+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84834F21391C430012C418 /* Calendar.Component+Extensions.swift */; };
 		1B84835221391C430012C418 /* DateComponents+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84835021391C430012C418 /* DateComponents+Extensions.swift */; };
 		30057A1A4F5D9DA5EDB718F225AA6BC4 /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCD89C1319A9F3785D7325B78ABC98C /* Pods-NKTimeIntervalTextTransformation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3902D78E22DDD546008E634E /* NKTextTimeIntervalConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84834421391C380012C418 /* NKTextTimeIntervalConfiguration.swift */; };
 		3CF32A2FC8938714F2B56925A73AB6CC /* Pods-NKTimeIntervalTextTransformation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BA698E5C1D54CD0EA4D2BFDCA87A2FDA /* Pods-NKTimeIntervalTextTransformation_Tests-dummy.m */; };
 		599B2E39C5B48A46A7623945CF86E89C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		7DF741A27DEA30DE9C97EA06B59073F7 /* NKTimeIntervalTextTransformation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0461CB97A9F8FA0804460D78DEADA2C5 /* NKTimeIntervalTextTransformation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,12 +47,12 @@
 		0461CB97A9F8FA0804460D78DEADA2C5 /* NKTimeIntervalTextTransformation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NKTimeIntervalTextTransformation-umbrella.h"; sourceTree = "<group>"; };
 		1845A814BC4E392C4D935BFC31C1CA65 /* Pods-NKTimeIntervalTextTransformation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NKTimeIntervalTextTransformation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1B7E7CEBE58786F444117BC66CE890FF /* Pods-NKTimeIntervalTextTransformation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NKTimeIntervalTextTransformation_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1B84834321391C380012C418 /* Date+NKTimeIntervalTextTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+NKTimeIntervalTextTransformable.swift"; path = "NKTimeIntervalTextTransformation/Classes/Date+NKTimeIntervalTextTransformable.swift"; sourceTree = "<group>"; };
+		1B84834321391C380012C418 /* Date+NKTimeIntervalTextTransformable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+NKTimeIntervalTextTransformable.swift"; path = "../Date+NKTimeIntervalTextTransformable.swift"; sourceTree = "<group>"; };
 		1B84834421391C380012C418 /* NKTextTimeIntervalConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NKTextTimeIntervalConfiguration.swift; path = NKTimeIntervalTextTransformation/Classes/NKTextTimeIntervalConfiguration.swift; sourceTree = "<group>"; };
-		1B84834521391C380012C418 /* Set+NKDateComponentRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Set+NKDateComponentRule.swift"; path = "NKTimeIntervalTextTransformation/Classes/Set+NKDateComponentRule.swift"; sourceTree = "<group>"; };
-		1B84834621391C380012C418 /* TimeInterval+NKTimeIntervalDateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeInterval+NKTimeIntervalDateComponents.swift"; path = "NKTimeIntervalTextTransformation/Classes/TimeInterval+NKTimeIntervalDateComponents.swift"; sourceTree = "<group>"; };
+		1B84834521391C380012C418 /* Set+NKDateComponentRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+NKDateComponentRule.swift"; sourceTree = "<group>"; };
+		1B84834621391C380012C418 /* TimeInterval+NKTimeIntervalDateComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TimeInterval+NKTimeIntervalDateComponents.swift"; path = "../TimeInterval+NKTimeIntervalDateComponents.swift"; sourceTree = "<group>"; };
 		1B84834721391C380012C418 /* NKDateComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NKDateComponent.swift; path = NKTimeIntervalTextTransformation/Classes/NKDateComponent.swift; sourceTree = "<group>"; };
-		1B84834821391C380012C418 /* NKTextTimeIntervalConfiguration+DefaultValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NKTextTimeIntervalConfiguration+DefaultValues.swift"; path = "NKTimeIntervalTextTransformation/Classes/NKTextTimeIntervalConfiguration+DefaultValues.swift"; sourceTree = "<group>"; };
+		1B84834821391C380012C418 /* NKTextTimeIntervalConfiguration+DefaultValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NKTextTimeIntervalConfiguration+DefaultValues.swift"; sourceTree = "<group>"; };
 		1B84834F21391C430012C418 /* Calendar.Component+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calendar.Component+Extensions.swift"; sourceTree = "<group>"; };
 		1B84835021391C430012C418 /* DateComponents+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+Extensions.swift"; sourceTree = "<group>"; };
 		22453B90D6BAF192AB5AA36F6CE7E598 /* Pods-NKTimeIntervalTextTransformation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NKTimeIntervalTextTransformation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -177,16 +177,25 @@
 			children = (
 				1B84834721391C380012C418 /* NKDateComponent.swift */,
 				1B84834421391C380012C418 /* NKTextTimeIntervalConfiguration.swift */,
-				1B84834821391C380012C418 /* NKTextTimeIntervalConfiguration+DefaultValues.swift */,
-				1B84834321391C380012C418 /* Date+NKTimeIntervalTextTransformable.swift */,
-				1B84834521391C380012C418 /* Set+NKDateComponentRule.swift */,
-				1B84834621391C380012C418 /* TimeInterval+NKTimeIntervalDateComponents.swift */,
 				1B84834221391B870012C418 /* Private */,
+				3902D78B22DCFA9C008E634E /* Extensions */,
 				EC08FC3FFCA9FC05D3ABED5EFA632EEE /* Pod */,
 				ABAB4CF0A5E267DACB8ABC5B7022B987 /* Support Files */,
 			);
 			name = NKTimeIntervalTextTransformation;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		3902D78B22DCFA9C008E634E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B84834821391C380012C418 /* NKTextTimeIntervalConfiguration+DefaultValues.swift */,
+				1B84834321391C380012C418 /* Date+NKTimeIntervalTextTransformable.swift */,
+				1B84834521391C380012C418 /* Set+NKDateComponentRule.swift */,
+				1B84834621391C380012C418 /* TimeInterval+NKTimeIntervalDateComponents.swift */,
+			);
+			name = Extensions;
+			path = NKTimeIntervalTextTransformation/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -347,7 +356,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				TargetAttributes = {
 					76C19C449B5F296FAF0AB7FE21FF9CA5 = {
 						LastSwiftMigration = 0940;
@@ -356,10 +365,11 @@
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = 06EE0653D74B29652E5F2D493BF1E7E8 /* Products */;
@@ -386,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3902D78E22DDD546008E634E /* NKTextTimeIntervalConfiguration.swift in Sources */,
 				1B84834921391C380012C418 /* Date+NKTimeIntervalTextTransformable.swift in Sources */,
 				1B84834E21391C380012C418 /* NKTextTimeIntervalConfiguration+DefaultValues.swift in Sources */,
 				1B84834C21391C380012C418 /* TimeInterval+NKTimeIntervalDateComponents.swift in Sources */,
@@ -394,7 +405,6 @@
 				1B84835121391C430012C418 /* Calendar.Component+Extensions.swift in Sources */,
 				1B84834B21391C380012C418 /* Set+NKDateComponentRule.swift in Sources */,
 				9F50A6D5A416E6EE93C595EC8286722B /* NKTimeIntervalTextTransformation-dummy.m in Sources */,
-				1B84834A21391C380012C418 /* NKTextTimeIntervalConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +495,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -497,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -552,6 +563,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
@@ -662,6 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -712,6 +725,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -742,7 +757,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

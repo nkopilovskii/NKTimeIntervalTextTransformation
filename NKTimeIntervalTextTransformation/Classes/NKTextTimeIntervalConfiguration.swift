@@ -1,4 +1,24 @@
 //
+//Copyright (c) 2019 nkopilovskii <nkopilovskii@gmail.com>
+//
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+//
+//The above copyright notice and this permission notice shall be included in
+//all copies or substantial portions of the Software.
+//
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//THE SOFTWARE.
+//
 //  NKTextTimeIntervalConfiguration.swift
 //
 //  Created by Nick Kopilovskii on 22.08.2018.
@@ -97,7 +117,48 @@ Time component count (Double used if it needs to make representation for floatin
     formatter = formatter.replacingOccurrences(of: NKTextTimeIntervalConfiguration.numberValueKey, with: shouldWriteNumbers ? String(abs(value)) : "")
     formatter = formatter.replacingOccurrences(of: "  ", with: " ")
     if formatter.first == " " { formatter.removeFirst() }
-    
+
     return formatter
+  }
+}
+
+
+//MARK: - NKTextTimeIntervalConfiguration default configurations
+/**
+  This extension contains static methods that generate configurations based on rules for declining the numerals of some languages
+ */
+public extension NKTextTimeIntervalConfiguration {
+  
+  /**
+   Public static method generate default configuration based on rules for declining the numerals of English
+   */
+  static func defaultEnglish() -> NKTextTimeIntervalConfiguration  {
+    var config = NKTextTimeIntervalConfiguration()
+    
+    config.setupDefaultEnglish()
+    
+    return config
+  }
+  
+  /**
+   Public static method generate default configuration based on rules for declining the numerals of Russian
+   */
+  static func defaultRussian() -> NKTextTimeIntervalConfiguration  {
+    var config = NKTextTimeIntervalConfiguration()
+    
+   config.setupDefaultRussian()
+    
+    return config
+  }
+  
+  /**
+   Public static method generate default configuration based on rules for declining the numerals of Ukrainian
+   */
+  static func defaultUkrainian() -> NKTextTimeIntervalConfiguration  {
+    var config = NKTextTimeIntervalConfiguration()
+    
+    config.setupDefaultUkrainian()
+    
+    return config
   }
 }

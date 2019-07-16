@@ -1,9 +1,9 @@
 # NKTimeIntervalTextTransformation
 
-[![CI Status](https://img.shields.io/travis/nkopilovskii/NKTimeIntervalTextTransformation.svg?style=flat)](https://travis-ci.org/nkopilovskii/NKTimeIntervalTextTransformation)
+<!--[![CI Status](https://img.shields.io/travis/nkopilovskii/NKTimeIntervalTextTransformation.svg?style=flat)](https://travis-ci.org/nkopilovskii/NKTimeIntervalTextTransformation)-->
 [![Version](https://img.shields.io/cocoapods/v/NKTimeIntervalTextTransformation.svg?style=flat)](https://cocoapods.org/pods/NKTimeIntervalTextTransformation)
-[![License](https://img.shields.io/cocoapods/l/NKTimeIntervalTextTransformation.svg?style=flat)](https://cocoapods.org/pods/NKTimeIntervalTextTransformation)
-[![Platform](https://img.shields.io/cocoapods/p/NKTimeIntervalTextTransformation.svg?style=flat)](https://cocoapods.org/pods/NKTimeIntervalTextTransformation)
+[![License](https://img.shields.io/cocoapods/l/NKTimeIntervalTextTransformation.svg?style=flat&color=yellow)](https://cocoapods.org/pods/NKTimeIntervalTextTransformation)
+[![Platform](https://img.shields.io/cocoapods/p/NKTimeIntervalTextTransformation.svg?style=flat&collor=black)](https://cocoapods.org/pods/NKTimeIntervalTextTransformation)
 
 ## Descripion
 
@@ -207,6 +207,18 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'NKTimeIntervalTextTransformation'
 ```
+
+## Requirements
+
+**iOS** 10.0
+
+**Swift** 5.0
+
+## Version history
+
+### v.0.1.0
+
+### v.0.1.1
 
 ## Author
 
