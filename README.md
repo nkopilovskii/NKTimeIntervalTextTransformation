@@ -222,6 +222,9 @@ pod 'NKTimeIntervalTextTransformation'
 
 - Cleanup & small fixes
 
+### v.0.1.2
+- Fixxed issues
+
 ## Author
 
 nkopilovskii, nkopilovskii@gmail.com

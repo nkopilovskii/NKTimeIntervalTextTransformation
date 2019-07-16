@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NKTimeIntervalTextTransformation'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Transformation TimeInterval between dates with customization of the declination rules'
 
   s.description      = <<-DESC

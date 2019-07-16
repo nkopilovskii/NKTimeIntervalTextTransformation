@@ -94,6 +94,11 @@ public enum NKDateComponent: Hashable, Equatable {
     case .seconds:   return 7
     }
   }
+
+  public func hash(into hasher: inout Hasher) {
+    //FIXME
+    #warning("Fix It")
+  }
   
   public static func == (lhs: NKDateComponent, rhs: NKDateComponent) -> Bool {
     return lhs.hashValue == rhs.hashValue
