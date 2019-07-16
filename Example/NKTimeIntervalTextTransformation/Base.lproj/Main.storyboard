@@ -57,26 +57,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvU-Y3-mAa">
-                                <rect key="frame" x="143" y="278.5" width="89" height="30"/>
+                                <rect key="frame" x="143" y="238.5" width="89" height="30"/>
                                 <state key="normal" title="Dummy Chat"/>
                                 <connections>
                                     <segue destination="Qg4-vQ-9ON" kind="show" id="bNp-QU-dl2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ma-CB-PpA">
-                                <rect key="frame" x="126" y="358.5" width="122" height="30"/>
+                                <rect key="frame" x="126" y="318.5" width="122" height="30"/>
                                 <state key="normal" title="Dummy Reminder"/>
                                 <connections>
                                     <segue destination="mhg-oJ-7qZ" kind="show" id="wq6-0K-urJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4x-79-sux">
+                                <rect key="frame" x="93" y="398.5" width="188" height="30"/>
+                                <state key="normal" title="Dummy Time Interval Chain"/>
+                                <connections>
+                                    <segue destination="AtH-qe-ZyS" kind="show" id="HMN-l7-YSI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xvU-Y3-mAa" firstAttribute="centerY" secondItem="9DE-tE-vES" secondAttribute="centerY" constant="-40" id="KxL-ro-Zjh"/>
-                            <constraint firstItem="6Ma-CB-PpA" firstAttribute="centerY" secondItem="9DE-tE-vES" secondAttribute="centerY" constant="40" id="RIk-iE-e1w"/>
+                            <constraint firstItem="b4x-79-sux" firstAttribute="centerX" secondItem="9DE-tE-vES" secondAttribute="centerX" id="9Kn-gJ-F6v"/>
+                            <constraint firstItem="6Ma-CB-PpA" firstAttribute="centerY" secondItem="9DE-tE-vES" secondAttribute="centerY" id="RIk-iE-e1w"/>
                             <constraint firstItem="6Ma-CB-PpA" firstAttribute="centerX" secondItem="9DE-tE-vES" secondAttribute="centerX" id="Rfr-qQ-Z2q"/>
                             <constraint firstItem="xvU-Y3-mAa" firstAttribute="centerX" secondItem="9DE-tE-vES" secondAttribute="centerX" id="TYx-gy-DL3"/>
+                            <constraint firstItem="b4x-79-sux" firstAttribute="top" secondItem="6Ma-CB-PpA" secondAttribute="bottom" constant="50" id="omF-4Q-VT7"/>
+                            <constraint firstItem="6Ma-CB-PpA" firstAttribute="top" secondItem="xvU-Y3-mAa" secondAttribute="bottom" constant="50" id="otK-Qe-QQt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vSu-8z-S0j"/>
@@ -93,16 +102,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Esr-xT-l8M">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Esr-xT-l8M" id="UXv-hS-Rfl">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="mhg-oJ-7qZ" id="mdP-G6-0dv"/>
                             <outlet property="delegate" destination="mhg-oJ-7qZ" id="6dP-ub-prC"/>
@@ -112,6 +111,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fY-w6-B8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="711" y="-258"/>
+        </scene>
+        <!--Dummy Time Interval Chain-->
+        <scene sceneID="GOK-fy-1ZH">
+            <objects>
+                <tableViewController id="AtH-qe-ZyS" customClass="DummyTimeIntervalChain" customModule="NKTimeIntervalTextTransformation_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vJu-M0-G0O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="AtH-qe-ZyS" id="MUW-eg-smB"/>
+                            <outlet property="delegate" destination="AtH-qe-ZyS" id="0p1-Dh-tEV"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9z-eR-cnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="267"/>
         </scene>
     </scenes>
 </document>

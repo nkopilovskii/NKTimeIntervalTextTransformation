@@ -17,29 +17,35 @@ class DummyReminder: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.register(UINib(nibName: "DummyCell", bundle: nil), forCellReuseIdentifier: DummyCell.identifier)
     dateFormatter.dateFormat = "dd MMMM yyyy HH:mm:ss"
     title = "Start time: \(dateFormatter.string(from: Date()))"
     
     //Creating array of dates when event must happen
     //First date based on current time
     dates.append(Date())
-    (1...19).forEach {
+    (1...15).forEach {
       //Each date based on previous and it greater than previous
       dates.append(dates[$0-1].addingTimeInterval(TimeInterval(pow(5.0, Double($0)) + 1.0)))
     }
 
     //Customizing zeroTimeIntervalPlaceholder
     timeIntervalConfiguration.zeroTimeIntervalPlaceholder = "at the same time"
+    
     //Customizing declension rule for minute time component
-    timeIntervalConfiguration.minutes = {
-      return $0 == 1 ? ("a minute", false) : ("a few minutes", false)
-    }
+    timeIntervalConfiguration.components.update(with: NKDateComponent.minutes({
+      switch $0 {
+      case 0: return ("a minute", false)
+      case 1...10: return ("a few minutes", false)
+      default: return ("minutes", true)
+      }
+    }))
     
     //Ignoring declension rule for month time component (NKTimeIntervalTextTransformation will use previous declension rule = timeIntervalConfiguration.weeks)
-    timeIntervalConfiguration.months = nil
+    timeIntervalConfiguration.components.removeEqual(to: NKDateComponent.months({ _ in return nil }))
+  
     
     
-    tableView.register(UINib(nibName: "DummyCell", bundle: nil), forCellReuseIdentifier: DummyCell.identifier)
     tableView.reloadData()
   }
   

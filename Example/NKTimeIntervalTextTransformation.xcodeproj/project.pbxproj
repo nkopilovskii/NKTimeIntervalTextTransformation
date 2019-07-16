@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B83140821382504006008C5 /* DummyTimeIntervalChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B83140721382504006008C5 /* DummyTimeIntervalChain.swift */; };
 		1BA90D6A2133D1270005F2DB /* DummyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA90D692133D1270005F2DB /* DummyChat.swift */; };
 		1BA90D6C2133D1400005F2DB /* DummyReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA90D6B2133D1400005F2DB /* DummyReminder.swift */; };
 		1BA90D6E2133D3000005F2DB /* DummyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA90D6D2133D3000005F2DB /* DummyCell.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		0CAB90538EBE7825729EB048 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1B83140721382504006008C5 /* DummyTimeIntervalChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTimeIntervalChain.swift; sourceTree = "<group>"; };
 		1BA90D692133D1270005F2DB /* DummyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyChat.swift; sourceTree = "<group>"; };
 		1BA90D6B2133D1400005F2DB /* DummyReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyReminder.swift; sourceTree = "<group>"; };
 		1BA90D6D2133D3000005F2DB /* DummyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCell.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				1BA90D692133D1270005F2DB /* DummyChat.swift */,
 				1BA90D6B2133D1400005F2DB /* DummyReminder.swift */,
+				1B83140721382504006008C5 /* DummyTimeIntervalChain.swift */,
 				1BA90D6D2133D3000005F2DB /* DummyCell.swift */,
 				1BA90D6F2133D3140005F2DB /* DummyCell.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -336,6 +339,7 @@
 				1BA90D6E2133D3000005F2DB /* DummyCell.swift in Sources */,
 				1BA90D6A2133D1270005F2DB /* DummyChat.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				1B83140821382504006008C5 /* DummyTimeIntervalChain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
